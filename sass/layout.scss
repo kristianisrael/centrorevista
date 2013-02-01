@@ -1,0 +1,640 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+@import "base.css";
+@import "skeleton.css";
+@import "compass/css3";
+
+$cream: #d1cac3;
+$gray: #9ca0a7;
+$red: #a61e2b;
+$red_dark: darken($red, 10%);
+@include font-face("Futura", font-files("fonts/Futura.otf"));
+@include font-face("FuturaBT", font-files("fonts/FuturaBT.otf"));
+
+
+
+
+body{
+	background: url(../images/bg.jpg);
+	font-family: "Lucida Sans";
+	color: #232937;
+
+}
+
+a{
+	@include transition(all 0.3s ease-in-out);
+	color: #434751;
+	&:hover{
+		color: $red;
+	}
+}
+ul.border{
+	li{
+
+		border-bottom: 1px solid $gray;
+		@include transition(all 0.5s ease-in-out);
+		a{
+			display: block;
+
+		}
+		a:hover{
+			padding-left:15px;
+		}
+	}
+}
+.single{
+	ul{
+		padding-left:30px;
+		li{
+			font-size: 13px;
+			list-style-type: disc;
+			line-height: 10px;
+		}
+	}
+	ol{
+		padding-left:5px;
+		li{
+			font-size: 13px;
+			line-height: 10px;
+		}
+	}
+p{
+	@extend p.med;
+	margin-bottom:12px;
+	line-height: 18px!important;
+}
+h1{
+	@extend h5;
+	margin: 10px 0!important;
+	font-size: 32px!important;
+
+}
+}
+
+img.left{
+	margin-right: 12px;
+}
+small{
+	font-size: 12px;
+}
+.sidebar{
+	height: 100%;
+}
+hr{
+	border-color: $gray;
+	margin:8px 0 10px 0;
+}
+input.med{
+	width: 70%;
+}
+a{
+	text-decoration: none;
+}
+.bgdark{
+	background: url(../images/bg_dark.jpg);
+}
+
+.left{float: left;}
+.p_10{
+	padding:10px;
+}
+.pt_20{
+	padding-top:20px;
+}
+
+.button{
+	background: $cream;
+	margin:0;
+	font-family: 'Lucida Sans', sans-serif;
+	font-size: 12px;
+	color: shade($cream, 35%);
+	padding:3px 10px;
+	border-left:0;
+	border-right: 0;
+	border-top: 1px solid white;
+	border-bottom: 1px solid shade($cream, 20%);
+	@include transition(all 0.3s ease);
+
+&:hover{
+	@include box-shadow(inset 0 1px 4px shade($cream, 20%));
+	background: $cream;
+	border-left:0;
+	border-right: 0;
+	border-bottom: 1px solid white;
+	border-top: 1px solid shade($cream, 20%);
+	color: shade($cream, 60%);
+}
+}
+.red{
+
+	.button{
+		margin-top: 2px;
+		padding:6px 10px;
+		background: darken($red, 14%);
+	    color: white;
+	    @include text-shadow(none);
+	    border: 0;
+	    border-top: 1px solid lighten($red, 20%);
+	    text-transform: uppercase;
+	    @include box-shadow(0 2px 2px darken($red, 20%));
+	}
+	p.med{
+		margin-bottom:8px;
+	}
+	input{
+		background: darken($red, 10%);
+		border:none;
+		margin:2px 14px 4px 0;
+		@include border-radius(5px);
+		@include box-shadow(inset 0 3px 4px darken($red, 20%));
+		&:hover, &:active, &:focus{
+			border:none;
+		}
+	}
+
+
+	h4{
+		color: rgba(255,255,255,0.6);
+		border-bottom: 1px solid rgba(255,255,255,0.4);
+	}
+
+	hr{
+		border-top: 1px solid rgba($red_dark, 0.9);
+		border-bottom: 1px solid rgba(255,255,255, 0.2);
+	}
+	.plus{
+		background: white;
+		color: $red;}
+	color: white;
+	h2, h3{
+		color:white;
+	}
+	h2{
+		border-bottom: 3px solid white;
+		margin: 0 0 10px 0;
+	}
+}
+a.plus{
+	color:white;
+}
+.plus{
+		margin-top: 3px;
+		text-align: center;
+		line-height: 16px;
+		float: right;
+		width: 16px;
+		height: 16px;
+		background: $red;
+		color: white;
+		font-weight: bold;
+		font-family: 'Futura';
+		@include border-radius(50%);
+		font-size: 12px;
+		@include transition(all 0.3s ease-in-out);
+&:hover{
+	@include rotate();
+
+}
+	}
+
+h2{
+	color:$red;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-family: 'Futura500';
+	letter-spacing: -1px;
+	font-weight: bold;
+	margin: 10px 0;
+	line-height: 24px;
+	border-bottom: 3px solid $red;
+
+}
+
+h3{
+	color: #434751;
+	font-size: 24px;
+	line-height: 27px;
+	font-family: 'Futura500';
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+h3.small{
+	font-size: 18px;
+	line-height: 18px;
+	margin-bottom:6px;
+
+}
+h4{
+margin: 8px 0 6px 0;
+	color: $gray;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 27px;
+	font-family: 'Futura500';
+	font-weight: bold;
+	border-bottom: 1px solid $gray;
+	
+}
+.single.info{
+	h4{	
+		margin-right: 10px;
+		display:  inline;
+		border-bottom: none;
+}	
+}
+h5{
+	color: #434751;
+	font-family: 'Futura500';
+	font-weight: bold;
+	font-size: 40px;
+	letter-spacing: -1px;
+	margin: 26px 0;
+}
+.omega{
+	h4{
+		margin-left: -20px;
+	padding-left: 20px;
+	}
+}
+
+.highlight{
+	p{text-align: justify;}
+	img{
+		margin-right:10px;
+		float:left;
+	}
+}
+.highlight.four{
+	height: 96px;
+}
+
+.cumple{
+	img{
+		border: 3px solid white;
+		margin-left: 3px;
+		&:first-child{
+			margin-left:0px;
+		}
+	}
+}
+
+.info{
+	border:none;
+	margin: -5px 0 0 0;
+}
+.footer{
+
+.set{
+	width:48%;
+	&:first-of-type{margin-right: 6px;
+		border-right: 1px solid white;
+		padding-right: 6px;
+		height: 80px;
+	}
+}
+	li{
+		font-size: 13px;
+		margin-bottom: 4px;
+		padding-bottom: 4px;
+		border-bottom: 1px solid white;
+		line-height: 10px;
+	}
+	padding-top: 20px;
+	margin-top:10px;
+}
+/* #Page Styles
+================================================== */
+p.small{
+		line-height: 14px;
+		font-size: 11px;
+}
+p.med{
+		line-height: 16px;
+		font-size: 13px;
+}
+
+.red_dark{
+
+	background-color: $red_dark;
+}
+
+
+
+.red{
+	background: $red url(../images/diagonal.png);
+	p{
+		margin-top:10px;
+	}
+}
+
+.red.p_10{
+	@include box-shadow (inset 0 0 20px darken($red_dark, 10%));
+}
+#top-banner{
+	height: auto;
+	line-height: 50%;
+	padding: 2% 0;
+}
+
+.right{
+float:right;
+}
+
+
+.menu{
+			height: 50px;
+margin-bottom: 0;
+	li{
+		font-size: 100%;
+		line-height: 50px;
+		float:left;
+		a{	color: white;
+			display: block;
+			padding: 0 6px;
+
+		}
+	}
+}
+.portada{
+
+	img{display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.extend{
+	width: 100%;
+	height: auto;
+}
+
+.extend.red{
+	@include box-shadow(0 -6px 6px rgba(0,0,0,0.2));
+}
+
+.logo{
+	position:absolute;
+	top:20px;
+img{
+	height: auto;
+	width: 100%;
+}
+}
+
+
+.portada_holder{
+
+	.titular{
+width: 100%;
+position: absolute;
+bottom: 70px;
+h1{
+	@include text-shadow( 1px -2px 6px black);
+	color:white;
+	font-family: 'Futura';
+	font-size: 58px;
+
+}
+	}
+	position: relative;
+	overflow: hidden;
+	max-height: 600px;
+	.desc{
+		padding: 10px 0;
+		height: 40px;
+		@include box-shadow( inset 0 8px 20px 0 rgba(0,0,0,0.6));
+		bottom:0;
+		position: absolute;
+		color: white;
+		background: rgba(0,0,0,0.3);
+		width: 100%;
+	}
+}
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {
+
+		.logo{
+			top: 10px;
+	position:absolute;
+img{
+	height: auto;
+	width: 80%;
+}
+}
+	}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+		.logo{
+			top: 10px;
+	position:absolute;
+img{
+	height: auto;
+	width: 80%;
+}
+}
+
+	.highlight.four{
+		img{
+			height: auto;
+			width: 40%;
+		}
+	}
+	
+	.highlight{
+		img{
+			height: auto;
+			width: 50%;
+		}
+	}
+
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+		.logo{
+			top: 10px;
+	position:absolute;
+img{
+	height: auto;
+width: 60%;
+}
+}
+
+.portada_holder{
+
+	.titular{
+width: 100%;
+position: absolute;
+bottom: 45px;
+h1{
+	@include text-shadow( 1px -2px 6px black);
+	color:white;
+	font-family: 'Futura';
+	font-size: 30px;
+
+}
+	}
+	position: relative;
+	overflow: hidden;
+	max-height: 600px;
+	.desc{
+		padding: 10px 0;
+		height: 40px;
+		@include box-shadow( inset 0 8px 20px 0 rgba(0,0,0,0.6));
+		bottom:0;
+		position: absolute;
+		color: white;
+		background: rgba(0,0,0,0.3);
+		width: 100%;
+	}
+}
+
+
+.highlight.four.alpha{
+	margin-bottom: 10px;
+	border-bottom: 1px solid $gray;
+}
+
+.red{
+	img{
+		width: 20%;
+		margin-right:10px;
+		float:left;
+	}
+}
+
+	}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+		.ad_2.four.columns{
+			float:left;
+			width: 145px;
+			img{
+				width: 100%;
+			}
+		}
+		.ad_2.alpha{
+			margin-right:5px;
+		}
+		.ad_2.omega{
+			margin-left:5px;
+		}
+		.highlight.four.alpha{
+			margin-bottom: 10px;
+			border-bottom: 1px solid $gray;
+		}
+		.menu{ 
+			height: 100%;
+			li{
+				font-size: 20px;
+				border-bottom: 1px solid $red_dark;
+				border-top: 1px solid rgba(255,255,255,0.2);
+				text-align: center;
+				width: 100%;
+				line-height: 16px;
+				margin-bottom: 0;
+				padding: 10px 0;
+			}
+		}
+
+		.logo{
+			top: 10px;
+			position:absolute;
+			img{
+				height: auto;
+				width: 30%;
+			}
+		}
+
+		.portada_holder{
+			.titular{
+			width: 100%;
+			position: absolute;
+			bottom: 36px;
+			h1{
+				@include text-shadow( 1px -2px 6px black);
+				color:white;
+				font-family: 'Futura';
+				font-size: 30px;
+			}
+		}
+		position: relative;
+		overflow: hidden;
+		max-height: 600px;
+		.desc{
+			padding: 10px 0;
+			height: 40px;
+			@include box-shadow( inset 0 8px 20px 0 rgba(0,0,0,0.6));
+			bottom:0;
+			position: absolute;
+			color: white;
+			background: rgba(0,0,0,0.3);
+			width: 100%;
+		}
+	
+	}
+
+		.highlight.main{
+		
+			img{
+				margin-right:10px;
+				float: none;
+				}
+		}
+
+.red{
+
+	img{
+		width: 30%;
+		margin-right:10px;
+		float: left;
+	}
+}
+
+	}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+	@font-face {
+	    font-family: 'Futura';
+	    src: url('../fonts/FUTURAMC.TTF') format('truetype');
+	    font-weight: normal;
+	    font-style: normal; }
+
+	@font-face {
+	    font-family: 'Futura500';
+	    src: url('../fonts/FUTURAMC.TTF') format('truetype');
+	    font-weight: lighter;
+	    font-style: normal; }
