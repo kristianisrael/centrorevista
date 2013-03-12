@@ -1,0 +1,592 @@
+@import url(base.css);
+@import url(skeleton.css);
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+/* #Site Styles
+================================================== */
+@font-face {
+  font-family: "Futura";
+  src: url('/fonts/fonts/Futura.otf') format('opentype'); }
+
+@font-face {
+  font-family: "FuturaBT";
+  src: url('/fonts/fonts/FuturaBT.otf') format('opentype'); }
+
+body {
+  background: url(../images/bg.jpg);
+  font-family: "Lucida Sans";
+  color: #232937; }
+
+p + a.button.more {
+  margin: -10px 0 10px 0; }
+
+a {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #434751; }
+  a:hover {
+    color: #a61e2b; }
+
+ul.border li {
+  border-bottom: 1px solid #9ca0a7;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+  ul.border li a {
+    display: block; }
+  ul.border li a:hover {
+    padding-left: 15px; }
+
+.single ul {
+  padding-left: 30px; }
+  .single ul li {
+    font-size: 13px;
+    list-style-type: disc;
+    line-height: 10px; }
+.single ol {
+  padding-left: 5px; }
+  .single ol li {
+    font-size: 13px;
+    line-height: 10px; }
+    .single p img {
+      max-width: 460px;
+      height: auto;
+    }
+.single p {
+  font-size: 13px;
+  margin-bottom: 12px;
+  line-height: 18px; }
+.single h1 {
+  margin: 10px 0 !important;
+  font-size: 32px!important; }
+
+img.left {
+  margin-right: 12px; }
+
+small {
+  font-size: 12px; }
+
+.sidebar {
+  height: 100%; }
+
+hr {
+  border-color: #9ca0a7;
+  margin: 8px 0 10px 0; }
+
+input.med {
+  width: 68%; }
+
+a {
+  text-decoration: none; }
+
+.bgdark {
+  background: url(../images/bg_dark.jpg); }
+
+.left {
+  float: left; }
+
+.p_10 {
+  padding: 10px; }
+
+.pt_20 {
+  padding-top: 20px; }
+
+.button.more {
+  padding: 0 4px 20px 8px;
+  line-height: 11px!important;
+  width: 16px;
+  height: 2px;
+  position: relative;
+  color: #726558;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 21px;
+  text-shadow: none !important; }
+  .button.more:before {
+    content: '_';
+    top: -10px;
+    position: absolute;
+    z-index: 2; }
+  .button.more:after {
+    content: '_';
+    top: -5px;
+    position: absolute;
+    z-index: 3;
+    left: 8px; }
+
+.button {
+  background: #d1cac3;
+  margin: 0;
+  font-family: "Lucida Sans", sans-serif;
+  font-size: 12px;
+  color: #87837e;
+  padding: 3px 10px;
+  border-left: 0;
+  border-right: 0;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #a7a19c;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .button:hover {
+    -webkit-box-shadow: inset 0 1px 4px #a7a19c;
+    -moz-box-shadow: inset 0 1px 4px #a7a19c;
+    box-shadow: inset 0 1px 4px #a7a19c;
+    background: #d1cac3;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid white;
+    border-top: 1px solid #a7a19c;
+    color: #53504e; }
+
+.red {
+  color: white; }
+  .red img {
+    width: 100%;
+    height: auto; }
+  .red .button {
+    margin-top: 2px;
+    padding: 6px 10px;
+    background: #6a131b;
+    color: white;
+    text-shadow: none;
+    border: 0;
+    border-top: 1px solid #df4b5a;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0 2px 2px #500e15;
+    -moz-box-shadow: 0 2px 2px #500e15;
+    box-shadow: 0 2px 2px #500e15; }
+  .red p.med, .red .single p, .single .red p {
+    margin-bottom: 8px; }
+  .red input {
+    background: #7b1620;
+    border: none;
+    margin: 2px 14px 4px 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 3px 4px #500e15;
+    -moz-box-shadow: inset 0 3px 4px #500e15;
+    box-shadow: inset 0 3px 4px #500e15; }
+    .red input:hover, .red input:active, .red input:focus {
+      border: none; }
+  .red h4 {
+    color: rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+  .red hr {
+    border-top: 1px solid rgba(123, 22, 32, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+  .red .plus {
+    background: white;
+    color: #a61e2b; }
+  .red h2, .red h3 {
+    color: white; }
+  .red h2 {
+    border-bottom: 3px solid white;
+    margin: 0 0 10px 0; }
+
+a.plus {
+  color: white; }
+
+.plus {
+  margin-top: 3px;
+  text-align: center;
+  line-height: 15px;
+  float: right;
+  width: 16px;
+  height: 16px;
+  background: #a61e2b;
+  color: white;
+  font-weight: bold;
+  font-family: verdana;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  font-size: 11px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .plus:hover {
+    text-align: center;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+
+h2 {
+  color: #a61e2b;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: 'Futura500';
+  letter-spacing: -1px;
+  font-weight: bold;
+  margin: 10px 0;
+  line-height: 24px;
+  border-bottom: 3px solid #a61e2b; }
+
+h3 {
+  color: #434751;
+  font-size: 24px;
+  line-height: 27px;
+  font-family: 'Futura500';
+  letter-spacing: -1px;
+  font-weight: bold; }
+
+h3.small {
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 6px; }
+
+h4 {
+  margin: 8px 0 6px 0;
+  color: #9ca0a7;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 27px;
+  font-family: 'Futura500';
+  font-weight: bold;
+  border-bottom: 1px solid #9ca0a7; }
+
+.single.info h4, .cat_info h4 {
+  margin-right: 10px;
+  display: inline;
+  border-bottom: none; }
+
+h5, .single h1 {
+  color: #434751;
+  font-family: 'Futura500';
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: -1px;
+  margin: 26px 0; }
+
+.omega h4 {
+  margin-left: -20px;
+  padding-left: 20px; }
+
+.highlight p {
+  text-align: justify; }
+.highlight img {
+  margin-right: 10px;
+  float: left; }
+
+.highlight.four {
+  height: 96px; }
+
+.cumple .wp-caption {
+  float: left;
+  border: 3px solid white;
+  margin-left: 4px; }
+  .cumple .wp-caption:first-child {
+    margin-left: 0px; }
+
+.info {
+  border: none;
+  margin: -5px 0 0 0; }
+
+.footer {
+  padding: 20px 0; }
+  .footer .set {
+    width: 48%; }
+    .footer .set:first-of-type {
+      margin-right: 6px;
+      border-right: 1px solid white;
+      padding-right: 6px;
+      height: 80px; }
+  .footer li {
+    font-size: 13px;
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid white;
+    line-height: 10px; }
+
+/* #Page Styles
+================================================== */
+p.small {
+  line-height: 14px;
+  font-size: 11px; }
+
+p.med {
+  line-height: 16px;
+  font-size: 13px; }
+
+.red_dark {
+  background-color: #7b1620; }
+
+.red {
+  background: #a61e2b url(../images/diagonal.png); }
+  .red p {
+    margin-top: 10px; }
+
+.red.p_10 {
+  -webkit-box-shadow: inset 0 0 20px #500e15;
+  -moz-box-shadow: inset 0 0 20px #500e15;
+  box-shadow: inset 0 0 20px #500e15; }
+
+#top-banner {
+  height: auto;
+  line-height: 50%;
+  padding: 2% 0; }
+
+.right {
+  float: right; }
+
+.menu {
+  height: 50px;
+  margin-bottom: 0; }
+  .menu li {
+    font-size: 100%;
+    line-height: 50px;
+    float: left; }
+    .menu li a {
+      color: white;
+      display: block;
+      padding: 0 6px; }
+
+.portada img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.extend {
+  width: 100%;
+  height: auto; }
+
+.extend.red {
+  -webkit-box-shadow: 0 -6px 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 -6px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -6px 6px rgba(0, 0, 0, 0.2); }
+
+.logo {
+  position: absolute;
+  top: 20px; }
+  .logo img {
+    height: auto;
+    width: 100%; }
+
+.portada_holder {
+  position: relative;
+  overflow: hidden;
+  max-height: 600px; }
+  .portada_holder .titular {
+    width: 100%;
+    position: absolute;
+    bottom: 70px; }
+    .portada_holder .titular h1 {
+      text-shadow: 1px -2px 6px black;
+      color: white;
+      font-family: 'Futura';
+      font-size: 58px; }
+  .portada_holder .desc {
+    padding: 10px 0;
+    height: 40px;
+    -webkit-box-shadow: inset 0 8px 20px 0 rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 8px 20px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 8px 20px 0 rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    position: absolute;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%; }
+
+.entrevista {
+  height: 30px; }
+  .entrevista h3 {
+    line-height: 30px; }
+
+.cat {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  border-bottom: 1px solid #9ca0a7;
+  padding: 10px 0; }
+  .cat:hover {
+    background: rgba(255, 255, 255, 0.8); }
+  .cat p {
+    padding: 0;
+    margin: 2px 0 0 0; }
+  .cat .cat_info {
+    display: block;
+    width: 354px; }
+    .cat .cat_info hr {
+      margin: 0; }
+
+/* #Media Queries
+================================================== */
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+  .logo {
+    top: 10px;
+    position: absolute; }
+    .logo img {
+      height: auto;
+      width: 80%; } }
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .logo {
+    top: 10px;
+    position: absolute; }
+    .logo img {
+      height: auto;
+      width: 80%; }
+
+  .highlight.four img {
+    height: auto;
+    width: 40%; }
+
+  .highlight img {
+    height: auto;
+    width: 50%; } }
+/* All Mobile Sizes (devices and browser) */
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .logo {
+    top: 10px;
+    position: absolute; }
+    .logo img {
+      height: auto;
+      width: 60%; }
+
+  .portada_holder {
+    position: relative;
+    overflow: hidden;
+    max-height: 600px; }
+    .portada_holder .titular {
+      width: 100%;
+      position: absolute;
+      bottom: 45px; }
+      .portada_holder .titular h1 {
+        text-shadow: 1px -2px 6px black;
+        color: white;
+        font-family: 'Futura';
+        font-size: 30px; }
+    .portada_holder .desc {
+      padding: 10px 0;
+      height: 40px;
+      -webkit-box-shadow: inset 0 8px 20px 0 rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: inset 0 8px 20px 0 rgba(0, 0, 0, 0.6);
+      box-shadow: inset 0 8px 20px 0 rgba(0, 0, 0, 0.6);
+      bottom: 0;
+      position: absolute;
+      color: white;
+      background: rgba(0, 0, 0, 0.3);
+      width: 100%; }
+
+  .highlight.four.alpha {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #9ca0a7; }
+
+  .red img {
+    width: 20%;
+    margin-right: 10px;
+    float: left; } }
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  .ad_2.four.columns {
+    float: left;
+    width: 145px; }
+    .ad_2.four.columns img {
+      width: 100%; }
+
+  .ad_2.alpha {
+    margin-right: 5px; }
+
+  .ad_2.omega {
+    margin-left: 5px; }
+
+  .highlight.four.alpha {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #9ca0a7; }
+
+  .menu {
+    height: 100%; }
+    .menu li {
+      font-size: 20px;
+      border-bottom: 1px solid #7b1620;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center;
+      width: 100%;
+      line-height: 16px;
+      margin-bottom: 0;
+      padding: 10px 0; }
+
+  .logo {
+    top: 10px;
+    position: absolute; }
+    .logo img {
+      height: auto;
+      width: 30%; }
+
+  .portada_holder {
+    position: relative;
+    overflow: hidden;
+    max-height: 600px; }
+    .portada_holder .titular {
+      width: 100%;
+      position: absolute;
+      bottom: 36px; }
+      .portada_holder .titular h1 {
+        text-shadow: 1px -2px 6px black;
+        color: white;
+        font-family: 'Futura';
+        font-size: 30px; }
+    .portada_holder .desc {
+      padding: 10px 0;
+      height: 40px;
+      -webkit-box-shadow: inset 0 8px 20px 0 rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: inset 0 8px 20px 0 rgba(0, 0, 0, 0.6);
+      box-shadow: inset 0 8px 20px 0 rgba(0, 0, 0, 0.6);
+      bottom: 0;
+      position: absolute;
+      color: white;
+      background: rgba(0, 0, 0, 0.3);
+      width: 100%; }
+
+  .highlight.main img {
+    margin-right: 10px;
+    float: none; }
+
+  .red img {
+    width: 30%;
+    margin-right: 10px;
+    float: left; } }
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+@font-face {
+  font-family: 'Futura';
+  src: url("../fonts/FUTURAMC.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Futura500';
+  src: url("../fonts/FUTURAMC.TTF") format("truetype");
+  font-weight: lighter;
+  font-style: normal; }
